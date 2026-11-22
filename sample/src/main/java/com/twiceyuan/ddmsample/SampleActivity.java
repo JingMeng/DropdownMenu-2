@@ -1,7 +1,7 @@
-package com.twiceyuan.ddmsample;
+﻿package com.twiceyuan.ddmsample;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.widget.TextView;
 
 import com.twiceyuan.ddmsample.custom.AnimatedHeader;
@@ -21,7 +21,7 @@ public class SampleActivity extends AppCompatActivity {
             "Hulk",
             "Thor",
             "Black Widow",
-            "一个长度特别长的用来测试最大长度的英雄"
+            "涓€涓暱搴︾壒鍒暱鐨勭敤鏉ユ祴璇曟渶澶ч暱搴︾殑鑻遍泟"
     };
 
     private final String[] COLORS = {
@@ -37,18 +37,18 @@ public class SampleActivity extends AppCompatActivity {
 
         final TextView textContent = findViewById(R.id.textContent);
 
-        // 默认样式 + 默认头部
+        // 榛樿鏍峰紡 + 榛樿澶撮儴
         new DropdownMenu.Builder<String>()
                 .header(new TextViewHeader(tvChooseHero))
                 .content(new DropListContent(this, Arrays.asList(HEROES)))
                 .build()
                 .setOnChooseListener(textContent::setText);
 
-        // 自定义样式 + 带动画指示器的头部
-        new DropdownMenu.Builder<String>()
+        // 鑷畾涔夋牱寮?+ 甯﹀姩鐢绘寚绀哄櫒鐨勫ご閮?        new DropdownMenu.Builder<String>()
                 .header(new AnimatedHeader(findViewById(R.id.layout_color_header)))
                 .content(new CustomListContent(this, Arrays.asList(COLORS)))
                 .build()
                 .setOnChooseListener(textContent::setText);
     }
 }
+
